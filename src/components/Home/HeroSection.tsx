@@ -5,7 +5,8 @@ const HeroSection = () => {
 		<div className="">
 			<div className="relative h-screen pt-20 ">
 				<video
-					autoPlay={false}
+					autoPlay={true}
+					muted
 					loop
 					playsInline
 					className="absolute inset-0 w-full h-full object-cover">
