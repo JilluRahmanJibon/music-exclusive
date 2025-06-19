@@ -3,19 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #000000;  
+	--foreground: #ededed;  
+	--font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+ 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+	color: var(--foreground);
+	background: var(--background);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+ 
+@layer utilities {
+	.footer-bg-mobile {
+		background-image: url("/assets/images/footer-mobile.png");
+	}
+
+	@media (min-width: 768px) {
+		.footer-bg-desktop {
+			background-image: url("/assets/images/footer-desktop.png");
+		}
+	}
 }
