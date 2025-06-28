@@ -20,7 +20,7 @@ const actor = Actor({
 });
 
 export const metadata = {
-	title: "Your App",
+	title: "Music Exclusive",
 	description: "Using Orbitron and Helvetica Neue",
 };
 

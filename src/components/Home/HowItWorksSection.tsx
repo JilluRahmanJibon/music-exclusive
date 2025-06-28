@@ -1,12 +1,13 @@
 import React from "react";
 import Button from "../../shared/UI-Kit/Button";
 import HowItsWorkCard from "@/shared/Card/HowItsWorkCard";
+import Link from "next/link";
 
 const HowItWorksSection = () => {
 	return (
-		<section className=" lg:pt-[210px] pt-[100px] ">
-			<div className=" max-w-[978px] mx-auto lg:text-center px-[20px] lg:px-0">
-				<div className="relative inline-block  lg:w-auto w-[251px] rounded-md md:w-auto px-[10px] lg:px-6 py-2 lg:py-4 text-white text-[20px] lg:text-[50px] font-[Orbitron] font-normal overflow-hidden">
+		<section id="HowItsWork" className=" lg:pt-[215px] pt-[100px] ">
+			<div className=" max-w-[978px] mx-auto sm:text-center px-[20px] lg:px-0">
+				<div className="relative inline-block    w-[251px] rounded-md sm:w-auto px-[10px] lg:px-6 py-2 lg:py-4 text-white text-[20px] lg:text-[50px] font-[Orbitron] font-normal overflow-hidden">
 					<span className="relative z-10 font-bold uppercase">
 						How Music Exclusive Works
 					</span>
@@ -51,9 +52,13 @@ const HowItWorksSection = () => {
 			</div>
 
 			{/* Button */}
-			<div className="flex flex-col md:flex-row justify-center items-center gap-[14px] pt-[60px]">
-				<Button buttonText={"Apply as an Artist"} />
-				<Button buttonText={"Join as a Fan"} />
+			<div className="flex flex-col sm:flex-row justify-center items-center gap-[14px] pt-[60px]">
+				<Link href={`https://form.typeform.com/to/HH6VA4pP`} target="_blank">
+					<Button buttonText="APPLY AS AN ARTIST" />
+				</Link>
+				<Link href={`https://form.typeform.com/to/FcBbN0PJ`} target="_blank">
+					<Button buttonText="JOIN AS A FAN" />
+				</Link>
 			</div>
 		</section>
 	);

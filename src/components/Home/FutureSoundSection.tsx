@@ -10,42 +10,32 @@ import portalImage from "../../../public/assets/images/future-bg.png";
 import gif from "../../../public/assets/images/section-gif.gif";
 import Button from "@/shared/UI-Kit/Button";
 import portalMobile from "../../../public/assets/images/portal-mobile.png";
+import Link from "next/link";
+import slider1 from "../../../public/assets/images/slider1.jpg";
+import slider2 from "../../../public/assets/images/slider2.png";
+import slider3 from "../../../public/assets/images/slider3.jpg";
+import slider4 from "../../../public/assets/images/slider4.jpg";
+import slider5 from "../../../public/assets/images/slider5.jpg";
 
 const artists = [
-	{ name: "LEO NOIR", subName: "EDM", src: "/assets/images/slider3.jpg" },
-	{
-		name: "ZELINA RAE",
-		subName: "ELECTRO SOUL",
-		src: "/assets/images/slider4.jpg",
-	},
-	{
-		name: "VAYVEN WEST",
-		subName: "HIP HOP",
-		src: "/assets/images/slider5.jpg",
-	},
-	{ name: "LEO NOIR", subName: "EDM", src: "/assets/images/slider3.jpg" },
-	{ name: "RAY B.", subName: "R&B", src: "/assets/images/slider1.jpg" },
-	{
-		name: "MIRA NOVA",
-		subName: "INDIE POP",
-		src: "/assets/images/slider2.png",
-	},
-	{
-		name: "MIRA NOVA",
-		subName: "INDIE POP",
-		src: "/assets/images/slider2.png",
-	},
+	{ name: "LEO NOIR", subName: "EDM", src: slider3 },
+	{ name: "ZELINA RAE", subName: "ELECTRO SOUL", src: slider4 },
+	{ name: "VAYVEN WEST", subName: "HIP HOP", src: slider5 },
+	{ name: "LEO NOIR", subName: "EDM", src: slider3 },
+	{ name: "RAY B.", subName: "R&B", src: slider1 },
+	{ name: "MIRA NOVA", subName: "INDIE POP", src: slider2 },
+	{ name: "MIRA NOVA", subName: "INDIE POP", src: slider2 },
 ];
 
 export default function FutureSoundSection() {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	return (
-		<div className="relative lg:h-[1477px]   mt-[90px] ">
+		<div className="relative lg:h-[1477px]   mt-[80px] ">
 			{/* content area  */}
 			<div className=" relative top-[8%] z-50">
 				<div className="     text-center px-[20px] lg:px-0">
-					<div className="relative inline-block  lg:w-auto w-[251px] rounded-md md:w-auto px-[10px] lg:px-6 py-2 lg:py-4 text-white text-[20px] lg:text-[50px] font-[Orbitron] font-normal overflow-hidden">
+					<div className="relative inline-block  sm:w-auto w-[251px] rounded-md md:w-auto px-[10px] lg:px-6 py-2 lg:py-4 text-white text-[20px] lg:text-[50px] font-[Orbitron] font-normal overflow-hidden">
 						<span className="relative z-10 font-bold uppercase">
 							Meet the Sound of the Future
 						</span>
@@ -71,10 +61,10 @@ export default function FutureSoundSection() {
 					<Image
 						src={portalImage}
 						alt="Vault Base"
-						className="hidden h-full w-full lg:block object-cover z-0"
+						className="hidden h-full w-full sm:block object-cover z-0"
 						priority
 					/>
-					<div className="w-[375px] lg:hidden h-[509px] overflow-hidden relative">
+					<div className="w-[375px] sm:hidden h-[509px] overflow-hidden relative">
 						<Image
 							src={portalMobile}
 							alt="Vault Base"
@@ -88,19 +78,27 @@ export default function FutureSoundSection() {
 						src={gif}
 						alt="Vault Animation"
 						height={286}
-						className="absolute lg:w-[403px] lg:h-[384px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-screen"
+						className="absolute rounded-full lg:w-[403px] lg:h-[384px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-screen"
 					/>
 
 					{/* Center Button */}
 					<div className="absolute flex flex-col gap-[16px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40">
-						<Button
-							className="md:w-[198px] w-[181px] md:h-[50px] h-[42px] "
-							buttonText="Apply as an Artist"
-						/>{" "}
-						<Button
-							className="md:w-[198px] w-[181px] md:h-[50px] h-[42px] "
-							buttonText="Join as a Fan"
-						/>
+						<Link
+							href={`https://form.typeform.com/to/HH6VA4pP`}
+							target="_blank">
+							<Button
+								className="md:w-[198px] w-[181px] md:h-[50px] h-[42px] "
+								buttonText="Apply as an Artist"
+							/>
+						</Link>
+						<Link
+							href={`https://form.typeform.com/to/FcBbN0PJ`}
+							target="_blank">
+							<Button
+								className="md:w-[198px] w-[181px] md:h-[50px] h-[42px] "
+								buttonText="Join as a Fan"
+							/>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -147,7 +145,7 @@ export default function FutureSoundSection() {
 											isActive
 												? " lg:w-[279px] w-[202px] lg:h-[401px] h-[291px] shadow-2xl z-10"
 												: isPrev || isNext
-												? "lg:scale-[1] lg:w-[234px] lg:h-[308px] hidden lg:block opacity-90 z-5 p-4"
+												? "lg:scale-[1] lg:w-[234px] lg:h-[308px] hidden lg:block opacity-90 z-50 p-4"
 												: "scale-[0.9] lg:w-[189px] lg:h-[273px] w-[170px] h-[223px]  opacity-70"
 										}`}>
 												{/* Image and text */}

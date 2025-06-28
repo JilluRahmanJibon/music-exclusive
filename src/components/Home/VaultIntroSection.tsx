@@ -10,6 +10,7 @@ import lockIcon from "../../../public/assets/icons/lock.svg";
 import vaultEntryMobile from "../../../public/assets/images/vaultEntry-mobile.png"; //bg1
 import vaultIntroMobile from "../../../public/assets/images/vaultInto-mobile.png"; //bg4
 import boxShadow from "../../../public/assets/images/message-box-shadow.svg";
+import Link from "next/link";
 
 const VaultIntroSection = () => {
 	return (
@@ -89,20 +90,20 @@ const VaultIntroSection = () => {
 				</div>
 			</div>
 			{/* Layered image section */}
-			<div className="relative lg:w-[1589px] mt-[80px]  lg:h-auto h-[520px] lg:top-[53%] lg:-translate-y-[44%] -translate-y-[10%]  left-1/2 -translate-x-1/2">
+			<div className="relative lg:w-[1589px] lg:mt-[80px]  lg:h-auto h-[520px] lg:top-[53%] lg:-translate-y-[44%] -translate-y-[10%]  left-1/2 -translate-x-1/2">
 				{/* Base Image */}
 				<Image
 					src={bg1}
 					alt="Vault Base"
 					height={774}
-					className="select-none hidden lg:block absolute object-cover  w-full lg:h-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
+					className="select-none hidden md:block absolute object-cover  w-full lg:h-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
 					priority
 				/>
 				<Image
 					src={vaultEntryMobile}
 					alt="Vault Base"
 					height={418}
-					className="lg:hidden  absolute object-cover h-[418px] w-[375px]  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
+					className="md:hidden  absolute object-cover h-[418px] w-[375px]  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
 					priority
 				/>
 
@@ -111,7 +112,7 @@ const VaultIntroSection = () => {
 					src={bg2}
 					alt="Vault Animation"
 					height={286}
-					className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-screen"
+					className="absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-screen"
 				/>
 
 				{/* gif2 */}
@@ -144,9 +145,13 @@ const VaultIntroSection = () => {
 			</div>
 
 			{/* Button Section */}
-			<div className="absolute  bottom-0 left-1/2 -translate-x-1/2 lg:-translate-y-1/2    z-40 flex lg:flex-row flex-col gap-[14px]  ">
-				<Button buttonText="APPLY AS AN ARTIST" />
-				<Button buttonText="JOIN AS A FAN" />
+			<div className="absolute  bottom-0 left-1/2 -translate-x-1/2 lg:-translate-y-1/2    z-40 flex sm:flex-row flex-col gap-[14px]  ">
+				<Link href={`https://form.typeform.com/to/HH6VA4pP`} target="_blank">
+					<Button buttonText="APPLY AS AN ARTIST" />
+				</Link>
+				<Link href={`https://form.typeform.com/to/FcBbN0PJ`} target="_blank">
+					<Button buttonText="JOIN AS A FAN" />
+				</Link>
 			</div>
 		</div>
 	);

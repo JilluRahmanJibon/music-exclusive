@@ -4,6 +4,7 @@ import tickIcon from "../../../public/assets/icons/tick.svg";
 import gif from "../../../public/assets/images/section-gif.gif";
 import Button from "@/shared/UI-Kit/Button";
 import portalMobile from "../../../public/assets/images/portal-mobile.png";
+import Link from "next/link";
 
 const checklist = [
 	"Unlock early access to exclusive artist drops",
@@ -15,12 +16,12 @@ const checklist = [
 
 const FansSection = () => {
 	return (
-		<div className="  w-full h-full lg:pt-[210px] pt-[80px]">
+		<div id="ForFans" className="  w-full h-full lg:pt-[210px] pt-[80px]">
 			<div className="relative">
 				<div className="relative  max-w-[1722px] text-white">
 					{/* Header Title */}
 					<div className="lg:absolute max-w-[962px] top-0 right-0 z-50 px-[20px] lg:px-0">
-						<div className="relative inline-block lg:w-auto  w-[243px] rounded-md md:w-auto px-4 lg:px-6 py-2 lg:py-4 text-white text-[20px] lg:text-[50px] font-[Orbitron] font-normal overflow-hidden">
+						<div className="relative inline-block  w-[243px] rounded-md sm:w-auto px-4 lg:px-6 py-2 lg:py-4 text-white text-[20px] lg:text-[50px] font-[Orbitron] font-normal overflow-hidden">
 							<span className="relative z-10 font-bold lg:whitespace-nowrap uppercase">
 								FANS: WHY MUSIC EXCLUSIVE?
 							</span>
@@ -69,10 +70,10 @@ const FansSection = () => {
 								alt="Vault Base"
 								width={1064}
 								height={913}
-								className="hidden h-full w-full lg:block object-cover z-0"
+								className="hidden h-full w-full sm:block object-cover z-0"
 								priority
 							/>
-							<div className="w-[375px] lg:hidden h-[509px] overflow-hidden relative">
+							<div className="w-[375px] sm:hidden h-[509px] overflow-hidden relative">
 								<Image
 									src={portalMobile}
 									alt="Vault Base"
@@ -88,23 +89,31 @@ const FansSection = () => {
 								src={gif}
 								alt="Vault Animation"
 								height={286}
-								className="lg:w-[403px] lg:h-[393px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-screen"
+								className="lg:w-[403px] lg:h-[393px] rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-screen"
 							/>
 
 							{/* Center Button */}
 							<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
-								<Button
-									className="lg:w-[254px] lg:h-[50px] "
-									buttonText="Join the Early Access List"
-								/>
+								<Link
+									href={`https://form.typeform.com/to/FcBbN0PJ`}
+									target="_blank">
+									<Button
+										className="lg:w-[254px] lg:h-[50px] h-[44px] "
+										buttonText="Join the Early Access List"
+									/>
+								</Link>
 							</div>
 						</div>
 					</div>
 				</div>
 				{/* Bottom Buttons */}
-				<div className="lg:absolute lg:bottom-[-20px] lg:left-1/2 lg:-translate-x-1/2  z-40 flex lg:flex-row flex-col justify-center items-center gap-[14px]  ">
-					<Button buttonText="APPLY AS AN ARTIST" />
-					<Button buttonText="JOIN AS A FAN" />
+				<div className="absolute lg:bottom-[-20px] bottom-0 left-1/2 -translate-x-1/2  z-40 flex sm:flex-row flex-col justify-center items-center gap-[14px]  ">
+					<Link href={`https://form.typeform.com/to/HH6VA4pP`} target="_blank">
+						<Button buttonText="APPLY AS AN ARTIST" />
+					</Link>
+					<Link href={`https://form.typeform.com/to/FcBbN0PJ`} target="_blank">
+						<Button buttonText="JOIN AS A FAN" />
+					</Link>
 				</div>
 			</div>
 			<div className="lg:pt-[130px] pt-[60px]">
@@ -112,13 +121,13 @@ const FansSection = () => {
 					<div className="relative  rounded-2xl p-[2px] bg-transparent overflow-hidden">
 						{/* 🔥 Top-right Glow as Border */}
 						<div className="absolute top-0 right-0  h-[148px] bg-gradient-to-l   from-[#9FA9FF] via-[#D9A8FF40] to-[#D9A8FF40] blur-[30px]  rounded-full -translate-x-1 -translate-y-1/2 z-0" />
-						<div className="absolute top-0 right-0 lg:w-[978px] w-[250px] h-[148px] bg-gradient-to-l   from-[#9FA9FF] via-[#D9A8FF40] to-[#D9A8FF40] blur-[30px]  rounded-full -translate-x-1 -translate-y-1/2 z-0" />
+						<div className="absolute top-0 right-0 lg:w-[978px]  w-[250px] h-[148px] bg-gradient-to-l   from-[#9FA9FF] via-[#D9A8FF40] to-[#D9A8FF40] blur-[30px]  rounded-full -translate-x-1 -translate-y-1/2 z-0" />
 
 						{/* 🔥 Bottom-left Glow as Border */}
 						<div className="absolute top-0 left-0 lg:w-[1578px] w-[785px] h-[148px] bg-gradient-to-l from-[#9FA9FF] via-[#D9A8FF40] to-[#D9A8FF40] blur-[30px]  rounded-full -translate-x-1/2 translate-y-3/4 z-0" />
 
 						{/* Main Inner Content */}
-						<div className="relative z-10  w-[335px] md:w-[1078px] md:h-[188px] h-[108px]  bg-[rgba(13,13,13,1)] rounded-2xl px-[20px] flex justify-center items-center text-white text-center">
+						<div className="relative z-10  w-[335px] md:w-[1078px] sm:w-auto md:h-[188px] h-[108px]  bg-[rgba(13,13,13,1)] rounded-2xl px-[20px] flex justify-center items-center text-white text-center">
 							{/* Inner glow top-left */}
 							<div className="absolute w-[120px] h-[57px] bg-[#A03ECD] blur-[15px] opacity-60 top-0 left-0 -translate-x-1/2 translate-y-8 z-0 rounded-full"></div>
 
@@ -126,7 +135,7 @@ const FansSection = () => {
 							<div className="absolute w-[77px] h-[68px] bg-[#4859C7] blur-[35px] bottom-0 right-0 translate-x-5 translate-y-4 z-0 rounded-full"></div>
 
 							{/* Heading */}
-							<h2 className="text-[20px] md:text-[40px] uppercase font-semibold ">
+							<h2 className="text-[20px] md:text-[40px] font-[400] uppercase  ">
 								You hear your favorite Artist releases on Music Exclusive first!
 							</h2>
 						</div>

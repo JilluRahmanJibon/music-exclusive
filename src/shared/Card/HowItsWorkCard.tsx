@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 
@@ -13,7 +14,7 @@ const HowItsWorkCard = ({ heading, subHeading, image }: any) => {
 				<div className="absolute top-0 left-0 w-[785px] h-[300px] bg-gradient-to-l from-[#9FA9FF] via-[#D9A8FF40] to-[#D9A8FF40] blur-[30px]  rounded-full -translate-x-1/2 translate-y-3/4 z-0" />
 
 				{/* Main Inner Content */}
-				<div className="relative z-10   lg:w-[507px] w-[335px] lg:h-[434px] h-[326px] bg-[rgba(13,13,13,1)] rounded-2xl px-[20px] lg:p-[40px] pb-[30px] pt-[30px] text-white text-center">
+				<div className="relative z-10   lg:w-[507px] w-[335px] lg:h-[434px] h-[326px] bg-[rgba(13,13,13,1)] rounded-2xl px-[20px] lg:p-[40px] pb-[30px] pt-[30px] text-white text-center ">
 					{/* Inner glow top-left */}
 					<div className="absolute w-[120px] h-[57px] bg-[#A03ECD] blur-[15px] opacity-60 top-0 left-0 -translate-x-1/2 translate-y-8 z-0 rounded-full"></div>
 

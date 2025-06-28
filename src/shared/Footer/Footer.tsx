@@ -2,6 +2,9 @@ import React from "react";
 import Button from "../../shared/UI-Kit/Button";
 import Link from "next/link";
 import Image from "next/image";
+import instagramIcon from '../../../public/assets/icons/instagram.png'
+import tiktokIcon from "../../../public/assets/icons/tiktok.png";
+import youtubeIcon from "../../../public/assets/icons/youtube.png";
 
 const Footer = () => {
 	return (
@@ -13,41 +16,24 @@ const Footer = () => {
 
 				{/* Linir gradient */}
 				<div className="flex flex-col md:flex-row justify-center items-center gap-[14px] pt-[30px]">
-					<Button
-						className="md:w-[266px] md:h-[66px] w-[198px] h-[44px]"
-						buttonText={"Apply as an Artist"}
-					/>
-					<Button
-						className="md:w-[266px] md:h-[66px] w-[198px] h-[44px]"
-						buttonText={"Join as a Fan"}
-					/>
+					<Link href={`https://form.typeform.com/to/HH6VA4pP`} target="_blank">
+						<Button buttonText="Apply as an Artist" />
+					</Link>
+					<Link href={`https://form.typeform.com/to/FcBbN0PJ`} target="_blank">
+						<Button buttonText="Join as a Fan" />
+					</Link>
 				</div>
 
 				{/* Social Link */}
 				<div className="flex  justify-center items-center gap-[14px] pt-[30px]">
 					<Link href={"#"}>
-						<Image
-							src={"/assets/icons/instagram.png"}
-							alt="Instagram"
-							height={50}
-							width={50}
-						/>
+						<Image src={instagramIcon} alt="Instagram" height={50} width={50} />
 					</Link>
 					<Link href={"#"}>
-						<Image
-							src={"/assets/icons/tiktok.png"}
-							alt="Instagram"
-							height={50}
-							width={50}
-						/>
+						<Image src={tiktokIcon} alt="tiktok" height={50} width={50} />
 					</Link>
 					<Link href={"#"}>
-						<Image
-							src={"/assets/icons/youtube.png"}
-							alt="Instagram"
-							height={50}
-							width={50}
-						/>
+						<Image src={youtubeIcon} alt="youtube" height={50} width={50} />
 					</Link>
 				</div>
 			</div>
